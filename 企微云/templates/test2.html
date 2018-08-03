@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>weui.js</title>
+     <link rel="stylesheet" href="../static/css/weui.css"/>
+    <link rel="stylesheet" href="../static/css/example.css"/>
+    <link rel="stylesheet" href="../static/css/main.css"/>
+
+</head>
+<body>
+    <div id="page">
+        <form action="">
+            <div class="weui-search-bar">
+                <span class="type_title">类型</span>
+                <a class="type_select" href="javascript:;" id="pickerBtn">请选择类型<span class="triangle"> ▼</span></a>
+            </div>
+            <div class="weui-search-bar">
+                <div class="type_title">校区</div>
+                <div class="type_select">请选择校区<span class="triangle"> ▼</span></div>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="../static/js/picker.min.js"></script>
+<script src="../static/js/zepto.min.js"></script>
+<script src="../static/js/example.js"></script>
+<script type="text/javascript">
+    /* picker */
+// 普通选择器
+document.querySelector('.type_select').addEventListener('click', function () {
+    weui.picker([{
+        label: '飞机票',
+        value: 0
+    }, {
+        label: '火车票(disabled)',
+        disabled: true,
+        value: 1
+    }, {
+        label: '的士票(disabled)',
+        disabled: true,
+        value: 2
+    }, {
+        label: '住宿费',
+        value: 3
+    }, {
+        label: '礼品费',
+        value: 4
+    }, {
+        label: '活动费',
+        value: 5
+    }, {
+        label: '通讯费',
+        value: 6
+    }, {
+        label: '补助',
+        value: 7
+    }, {
+        label: '通讯费',
+        value: 8
+    }, {
+        label: '其他',
+        value: 9
+    }], {
+        defaultValue: [8],
+        className: 'custom-classname',
+        onChange: function (result) {
+            //console.log(item, index);
+            console.log(result);
+        },
+        onConfirm: function (result) {
+            console.log(result);
+        },
+        id: 'picker'
+    });
+});
+
+
+</script>
+</html>

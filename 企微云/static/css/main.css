@@ -1,0 +1,103 @@
+.change-pw {
+	border-top: 1px solid #e5e5e5;
+	padding: 5px;
+}
+.type_hover .change-pw-first {
+      position: relative;
+      border-top: 0;
+      padding-top: 0;
+      background-color: white;
+      z-index: 600; /*这里很重要 要挡住三角形的下半部分*/
+ }
+
+
+.change-pw a{
+    color: #9B9B9B;
+}
+
+
+#repair_type{
+    margin-top: 1px;
+    margin-right:-2px ;
+    flex: auto;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    text-align: center;
+    color: #9B9B9B;
+    background: #FFFFFF;
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+    z-index: 2;
+    font-weight: bold ;
+}
+
+#type_panel{
+    width: 75px;
+    position: absolute;
+    left: 12px;
+    top: 39px;
+    background-color: white;
+    z-index: 500;
+    border-radius: 3px;
+    color: #9B9B9B;
+}
+
+.type_hover{
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+.type_hover:first-child:before {
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin: 0 auto;/*居中*/
+    display: block;/*独占一行*/
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2); /*配合整体一样的投影*/
+    background-color: #FFFFFF ;
+    width: 10px;
+    height: 10px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); /*一个正方形倾斜四十五度就是三角了但是要把下半部分藏起来*/
+    position: relative;
+    top: -5px; /*果断的露出上半部分*/
+    z-index: 0; /*果断的隐藏下半部分*/
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    border-bottom: 0;
+}
+
+
+.triangle{
+    font-size: 0.5px;
+    opacity: 0.5;
+}
+
+.weui-cell .type_title{
+    font-weight: bold;
+}
+.weui-cells_form .select{
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #D7D6DC;
+}
+
+.weui-cell .type_select input{
+    text-align: right;
+    width: 90%;
+
+}
+
+.weui-cell .type_select .triangle{
+    font-size: 0.5px;
+    opacity: 0.3;
+}
+
+.weui-cells_form .note:before{
+    border-top: 0;
+}
+
+.weui-cells_form .select:before{
+    border-top: 0;
+}
